@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 class SrcModel {
   String? landscape;
   String? large;
@@ -8,8 +10,8 @@ class SrcModel {
   String? small;
   String? tiny;
 
-  SrcModel({
-      this.landscape,
+  SrcModel(
+      {this.landscape,
       this.large,
       this.large2x,
       this.medium,
@@ -20,14 +22,14 @@ class SrcModel {
 
   factory SrcModel.fromJson(Map<String, dynamic> json) {
     return SrcModel(
-      landscape: json['landscape'],
-      large: json['large'],
-      large2x: json['large2x'],
-      medium: json['medium'],
-      original: json['original'],
-      portrait: json['portrait'],
-      small: json['small'],
-      tiny: json['tiny'],
+        landscape : json['landscape'],
+        large : json['large'],
+        large2x : json['large2x'],
+        medium : json['medium'],
+        original : json['original'],
+        portrait : json['portrait'],
+        small : json['small'],
+        tiny : json['tiny']
     );
   }
 }

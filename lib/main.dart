@@ -1,7 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wallpaper_app1/screens/splash_screen.dart';
+
+import 'package:wallpaper_app1/screens/wallpaper_list/bloc/wallpaper_list_bloc.dart';
+import 'package:wallpaper_app1/screens/wallpaper_page.dart';
+
+import 'api/api_helper.dart';
+import 'bloc/wallpaper_bloc.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiBlocProvider(
+    providers: [
+      BlocProvider(
+        create: (context) => WallpaperBloc(apiHelper: ApiHelper()),
+      ),
+      BlocProvider(
+        create: (context) => WallpaperListBloc(apiHelper: ApiHelper()),
+      ),
+    ],
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -11,14 +29,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      debugShowCheckedModeBanner: false,
+      title: 'Wallpaper App',
+      theme: ThemeData(primaryColor: Colors.deepPurple),
+      home:  WallpaperPage(),
     );
   }
 }
-

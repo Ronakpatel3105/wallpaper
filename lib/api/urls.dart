@@ -1,14 +1,11 @@
 class Urls{
+  ///base url
+  static const String BASE_URL = "https://api.pexels.com/v1/";
 
-
-  /// BASE URL
-  static const String BASE_URL =  'https://api.pexels.com/v1/';
-
-
-  /// SEARCH WALLPAPER
+  ///search wallpaper
   static const String searchWallpaper = "${BASE_URL}search";
 
-
-  /// SEARCH WALLPAPER
+  ///search wallpaper
   static const String trendingWallpaper = "${BASE_URL}curated";
+
 }
