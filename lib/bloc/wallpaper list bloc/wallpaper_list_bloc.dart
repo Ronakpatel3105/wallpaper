@@ -3,10 +3,10 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
-import '../../../api/api_helper.dart';
-import '../../../api/my_exceptions.dart';
-import '../../../api/urls.dart';
-import '../../../model/data_photo_model.dart';
+import '../../api/api_helper.dart';
+import '../../api/my_exceptions.dart';
+import '../../api/urls.dart';
+import '../../model/data_photo_model.dart';
 
 part 'wallpaper_list_event.dart';
 part 'wallpaper_list_state.dart';

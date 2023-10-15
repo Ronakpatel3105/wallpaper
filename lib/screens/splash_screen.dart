@@ -15,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Timer(Duration(seconds: 4), () {
+    Timer(const Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -38,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
               fit: BoxFit.cover,
             ),
           ),
-          Center(
+          const Center(
             child: Text(
               'Wallpaper',
               style: TextStyle(

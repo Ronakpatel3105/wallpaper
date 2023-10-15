@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wallpaper_app1/screens/wallpaper_detail_page.dart';
 
-import '../bloc/wallpaper_bloc.dart';
-import 'wallpaper_list/natural.dart';
+import '../bloc/wallpaper bloc/wallpaper_bloc.dart';
+import 'wallpaper_list_page.dart';
 
 class WallpaperPage extends StatefulWidget {
   @override
@@ -165,7 +165,7 @@ class WallpaperPageState extends State<WallpaperPage> {
                           controller: queryController,
                           decoration: InputDecoration(
                             hintText: 'Find Wallpaper..',
-                            hintStyle: TextStyle(
+                            hintStyle: const TextStyle(
                               color: Color.fromARGB(255, 152, 152, 152),
                             ),
                             suffixIcon: InkWell(
@@ -179,14 +179,14 @@ class WallpaperPageState extends State<WallpaperPage> {
                                       ));
                                   arrPhotos.clear();
                                 },
-                                child: Icon(Icons.image_search)),
-                            suffixIconColor: Color.fromARGB(255, 172, 172, 172),
-                            enabledBorder: UnderlineInputBorder(
+                                child: const Icon(Icons.image_search)),
+                            suffixIconColor: const Color.fromARGB(255, 172, 172, 172),
+                            enabledBorder: const UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0xffDBEBF1),
                               ),
                             ),
-                            focusedBorder: UnderlineInputBorder(
+                            focusedBorder: const UnderlineInputBorder(
                               borderSide: BorderSide(
                                 color: Color(0xffDBEBF1),
                               ),
@@ -215,14 +215,14 @@ class WallpaperPageState extends State<WallpaperPage> {
                       child: BlocBuilder<WallpaperBloc, WallpaperState>(
                         builder: (context, state) {
                           if (state is WallpaperLoadingState) {
-                            return Center(
+                            return const Center(
                               child: CircularProgressIndicator(),
                             );
                           } else if (state is WallpaperInternetErrorState) {
                             return Center(
                               child: Text(
                                 state.errorMsg,
-                                style: TextStyle(fontWeight: FontWeight.bold),
+                                style: const TextStyle(fontWeight: FontWeight.bold),
                               ),
                             );
                           } else if (state is WallpaperErrorState) {

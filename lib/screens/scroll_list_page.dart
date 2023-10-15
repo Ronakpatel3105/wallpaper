@@ -38,11 +38,11 @@ class _ScrollListPageState extends State<ScrollListPage> {
       if (mController.position.pixels == mController.position.maxScrollExtent) {
         print("End of List");
 
-          for (int i = 0; i < 10; i++) {
-            arrColors.add(Colors
-                .primaries[Random().nextInt(Colors.primaries.length - 1)]);
-          }
-          setState(() {});
+        for (int i = 0; i < 10; i++) {
+          arrColors.add(Colors
+              .primaries[Random().nextInt(Colors.primaries.length - 1)]);
+        }
+        setState(() {});
       }
     });
   }
@@ -79,7 +79,7 @@ class _ScrollListPageState extends State<ScrollListPage> {
           child: GridView.builder(
               controller: mController,
               itemCount: arrColors.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: 11,
                   crossAxisSpacing: 11,

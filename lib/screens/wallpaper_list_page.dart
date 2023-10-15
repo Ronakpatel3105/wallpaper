@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../model/photo_model.dart';
-import '../wallpaper_detail_page.dart';
-import 'bloc/wallpaper_list_bloc.dart';
+import '../model/photo_model.dart';
+import 'wallpaper_detail_page.dart';
+import '../bloc/wallpaper list bloc/wallpaper_list_bloc.dart';
 
 
 class WallpaperListPage extends StatefulWidget {
@@ -60,7 +60,7 @@ class _WallpaperListPageState extends State<WallpaperListPage> {
             children: [
               Text(
                 widget.mQuery,
-                style: TextStyle(
+                style: const TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
@@ -167,12 +167,12 @@ class _WallpaperListPageState extends State<WallpaperListPage> {
                       children: [
                         Text(
                           '$totalResults wallpaper available',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 22,
                             color: Colors.white,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         // Image of the natural element
@@ -181,7 +181,7 @@ class _WallpaperListPageState extends State<WallpaperListPage> {
                             controller: mController,
                             itemCount: arrPhotos.length,
                             gridDelegate:
-                            SliverGridDelegateWithFixedCrossAxisCount(
+                            const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 3,
                               crossAxisSpacing: 11,
                               mainAxisSpacing: 11,

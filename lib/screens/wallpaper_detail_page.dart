@@ -35,7 +35,7 @@ class WallpaperDetailPage extends StatelessWidget {
                   height: 50,
                   decoration: const BoxDecoration(
                       color: Colors.white, shape: BoxShape.circle),
-                  child: Icon(Icons.arrow_back_ios_new),
+                  child: const Icon(Icons.arrow_back_ios_new),
                 ),
               )),
           Align(
@@ -52,12 +52,12 @@ class WallpaperDetailPage extends StatelessWidget {
                     child: Container(
                       width: 50,
                       height: 50,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Colors.white, shape: BoxShape.circle),
-                      child: Icon(Icons.download),
+                      child: const Icon(Icons.download),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 21,
                   ),
                   InkWell(
@@ -67,9 +67,9 @@ class WallpaperDetailPage extends StatelessWidget {
                     child: Container(
                       width: 50,
                       height: 50,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: Colors.white, shape: BoxShape.circle),
-                      child: Icon(Icons.wallpaper),
+                      child: const Icon(Icons.wallpaper),
                     ),
                   )
                 ],
@@ -90,9 +90,9 @@ class WallpaperDetailPage extends StatelessWidget {
       print("Wallpaper downloaded in app cache..");
       //set wallpaper here
       var check = await Wallpaper.homeScreen(
-        width: mWidth!,
-        height: mHeight!,
-        options: RequestSizeOptions.RESIZE_EXACT
+          width: mWidth!,
+          height: mHeight!,
+          options: RequestSizeOptions.RESIZE_EXACT
       );
       print("Wallpaper: $check");
     }, onError: (e){
